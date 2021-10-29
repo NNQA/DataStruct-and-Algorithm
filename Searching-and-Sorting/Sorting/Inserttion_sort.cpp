@@ -39,6 +39,6 @@ int main() {
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> diff = end - start;
 
-    log(&vect, "Bubblue sort and Time Complexity " + std::to_string(diff.count()) + " microseconds");
+    log(&vect, "Insertion sort and Time Complexity " + std::to_string(diff.count()) + " microseconds");
     return 0;
 }
