@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "process",
+			"label": "C/C++: my build config",
+			"command": "C:\\TDM-GCC-64\\bin\\g++.exe",
+			"args": [
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "C:\\TDM-GCC-64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\TDM-GCC-64\\bin\\g++.exe"
+		},
+		{
+			"type": "shell",
+			"label": "C/C++: Run cpp",
+			"command": "./${fileBasenameNoExtension}.exe",
+			"dependsOn": "C/C++: my build config",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
+		}
+	]
+}
